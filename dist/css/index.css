@@ -1,0 +1,50 @@
+#head{
+    color: #7a657c;
+    background: #00CCFF;
+    padding: 5px;
+    text-align: center;
+}
+#content{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#menu{
+    border-right: solid 2px #a29ea6;
+    height: 800px;
+    padding-right: 0px;;
+}
+#menu .card-block{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+#menu>.card-header{
+    padding: 5px;
+}
+#menu .card-block>a{
+    border-radius: 0px;
+    padding: 2px;
+    width: 100%;
+    background: gainsboro;
+    border-left: solid 2px #a29ea6;;
+    border-bottom: solid 2px #a29ea6;
+}
+
+#content-body>div{
+    height: 400px;
+    border-bottom: solid 2px #419641;
+}
+
+/*#databaseManager{
+    display: table;
+}*/
+#databaseManager>form{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #00CCFF;
+    border-radius: 5px;
+    width: 600px;
+    background: #00CCFF;
+}
+#bottom{
+    padding: 5px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script type="text/javascript" src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/umd/collapse.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="container-fluid">
+    <div id="head">
+        <h1 class="center-block">Data Base Version Control</h1>
+    </div>
+    <div id="content">
+        <div class="row">
+            <div class="col-md-2 card" id="menu">
+                <div class="card-header">管理</div>
+                <div class="card-block">
+                   <a class="btn" data-toggle="collapse" aria-expanded="true" aria-controls="databaseManager" href="#databaseManager">数据库管理</a>
+                   <a class="btn" data-toggle="collapse" aria-expanded="false" aria-controls="tableList" href="#tableList">
+                       数据库表
+                       <i class="fa fa-angle-double-down pull-right"></i>
+                   </a>
+                   <div class="collapse" id="tableList">
+                     <div class="card card-block">
+                       <ul>
+                         <li  data-toggle="collapsed" aria-expanded="false" aria-controls="tableEdit" href="#tableEdit">aaaaa</li>
+                         <li  data-toggle="collapsed" aria-expanded="false" aria-controls="tableEdit" href="#tableEdit">aaaddf</li>
+                         <li  data-toggle="collapsed" aria-expanded="false" aria-controls="tableEdit" href="#tableEdit">ssss</li>
+                         <li  data-toggle="collapsed" aria-expanded="false" aria-controls="tableEdit" href="#tableEdit">sssss</li>
+                         <li  data-toggle="collapsed" aria-expanded="false" aria-controls="tableEdit" href="#tableEdit">ffffggg</li>
+                       </ul>
+                     </div>
+                   </div>
+                  <a class="btn" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                  </a>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-block">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-10" role="tablist" id="content-body">
+                <div id="databaseManager" role="tabpanel" class="panel-collapse collapse in">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group row">
+                            <label class="col-md-3 control-label" for="dbType">数据库类型</label>
+                            <div class="col-md-9">
+                                <select class="col-md-4 form-control" id="dbType" name="dbType">
+                                    <option value="mysql">mysql</option>
+                                    <option value="sqlserver">sqlserver</option>
+                                    <option value="oracle">oracle</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group  row">
+                            <label class="col-md-3 control-label" for="ip">IP地址</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="ip" name="ip" placeholder="请输入您的IP地址" />
+                            </div>
+                        </div>
+                        <div class="form-group  row">
+                            <label class="col-md-3 control-label" for="dbName">数据库名</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="dbName" placeholder="请输入您的数据库名" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 control-label" for="port">数据库端口</label>
+                            <div class="col-md-9">
+                                <input type="number" class="form-control" id="port" placeholder="请输入您的数据库端口" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <button class="col-md-offset-4 btn btn-primary" type="submit">提交</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="tableEdit" role="tabpanel" class="col-md-12 panel-collapse collapse"></div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="bottom">
+       <div class="text-center">
+          <strong>King</strong>
+       </div>
+    </div>
+</body>
+</html>
