@@ -38,12 +38,11 @@
     display: table;
 }*/
 #databaseManager>form{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     border: 1px solid #00CCFF;
     border-radius: 5px;
     width: 600px;
-    background: #00CCFF;
+    background: #dedae2;
 }
 #bottom{
     padding: 5px;
