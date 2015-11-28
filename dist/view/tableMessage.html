@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="../../bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/umd/collapse.js"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="../js/table-edit.js"></script>
+  <title></title>
+  <style>
+    #table-content table tbody input{
+      border: none;;
+    }
+  </style>
+</head>
+<body class="container">
+<div class="row" id="table-content">
+  <div id="menu-bar" class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+      <button class="btn fa fa-save" onclick="save()">&nbsp;Save</button>
+      <button class="btn fa fa-remove" onclick="removeColumn()">&nbsp;Delete Column</button>
+      <button class="btn fa fa-plus fa-align-left" onclick="addColumn()">&nbsp;Add Column</button>
+    </div>
+  </div>
+  <table class="text-center table table-bordered table-hover table-condensed">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Decimals</th>
+      <th>Not null</th>
+      <th>Primary Key</th>
+      <th>Default Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><input class="selectBox" type="checkbox"></td>
+      <td><input type="text"/></td>
+      <td>
+        <select>
+          <option value="int">int</option>
+          <option value="float">float</option>
+          <option value="varchar">varchar</option>
+          <option value="date">date</option>
+          <option value="datatime">datetime</option>
+        </select>
+      </td>
+      <td><input type="number"/></td>
+      <td><input type="number"/></td>
+      <td><input type="checkbox"/></td>
+      <td><input type="checkbox"/></td>
+      <td><input type="text"/></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

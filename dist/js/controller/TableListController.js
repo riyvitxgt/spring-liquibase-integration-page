@@ -4,8 +4,7 @@
 var tables = [];
 angular.module('DBApp',[])
   .controller('TableListController', function($scope){
-  $scope.tables = tables;
-   /*[
+  $scope.tables =[
     {
       "tableName":"NotTextAnnouncement",
       "id":2
@@ -22,7 +21,7 @@ angular.module('DBApp',[])
       "tableName":"LC_NotTextAnnouncement",
       "id":5
     }
-  ];*/
+  ];
   }).controller('getTables', function($scope,$http){
     var data = {
       dbType: $scope.dbType,
@@ -32,6 +31,8 @@ angular.module('DBApp',[])
     };
     //console.log(data.dbName);
     $scope.getTableList = function(){
-      $http.post("/3", data).success().error();
+      $http.post("/3", data).success().error(function(data){
+        console.log("Error" + data)
+      });
     }
   });
