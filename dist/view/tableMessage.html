@@ -23,42 +23,84 @@
       <button class="btn fa fa-save" onclick="save()">&nbsp;Save</button>
       <button class="btn fa fa-remove" onclick="removeColumn()">&nbsp;Delete Column</button>
       <button class="btn fa fa-plus fa-align-left" onclick="addColumn()">&nbsp;Add Column</button>
+      <button class="btn fa fa-plus fa-align-left" onclick="addIndex()">&nbsp;Add Index</button>
+      <button class="btn fa 3 fa-align-left" onclick="removeIndex()">&nbsp;Delete Index</button>
     </div>
   </div>
-  <table class="text-center table table-bordered table-hover table-condensed">
-    <thead>
-    <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Length</th>
-      <th>Decimals</th>
-      <th>Not null</th>
-      <th>Primary Key</th>
-      <th>Default Value</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td><input class="selectBox" type="checkbox"></td>
-      <td><input type="text"/></td>
-      <td>
-        <select>
-          <option value="int">int</option>
-          <option value="float">float</option>
-          <option value="varchar">varchar</option>
-          <option value="date">date</option>
-          <option value="datatime">datetime</option>
-        </select>
-      </td>
-      <td><input type="number"/></td>
-      <td><input type="number"/></td>
-      <td><input type="checkbox"/></td>
-      <td><input type="checkbox"/></td>
-      <td><input type="text"/></td>
-    </tr>
-    </tbody>
-  </table>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="table-detail-triggle" href="#table-detail" role="tab" data-toggle="tab">
+        Fields
+      </a>
+    </li>
+    <li class="nav-item"><a href="#index-detail" id="index-detail-triggle"  class="nav-link" role="tab" data-toggle="tab">Indexes</a></li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="table-detail">
+      <table class="text-center table table-bordered table-hover table-condensed">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Length</th>
+          <th>Decimals</th>
+          <th>Not null</th>
+          <th>Primary Key</th>
+          <th>Default Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><input class="selectBox" type="checkbox"></td>
+          <td><input type="text"/></td>
+          <td>
+            <select>
+              <option value="int">int</option>
+              <option value="float">float</option>
+              <option value="varchar">varchar</option>
+              <option value="date">date</option>
+              <option value="datatime">datetime</option>
+            </select>
+          </td>
+          <td><input type="number"/></td>
+          <td><input type="number"/></td>
+          <td><input type="checkbox"/></td>
+          <td><input type="checkbox"/></td>
+          <td><input type="text"/></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="index-detail">
+      <table class="table table-bordered table-hover table-condensed">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Fields</th>
+          <th>Index Type</th>
+          <th>Unique</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><input class="selectBox" type="checkbox"/></td>
+          <td><input type="text"/></td>
+          <td><input type="text"/></td>
+          <td>
+            <select>
+              <option>Unique</option>
+              <option>Normal</option>
+              <option>Full Text</option>
+            </select>
+          </td>
+          <td><input type="checkbox"/></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 </body>
 </html>
